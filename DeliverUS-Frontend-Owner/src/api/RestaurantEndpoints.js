@@ -23,4 +23,8 @@ function remove (id) {
   return destroy(`restaurants/${id}`)
 }
 
-export { getAll, getDetail, getRestaurantCategories, create, update, remove }
+function changeStatus (id) {
+  return patch(`/restaurants/${id}/status`)
+}
+
+export { getAll, getDetail, getRestaurantCategories, create, update, remove, changeStatus }
